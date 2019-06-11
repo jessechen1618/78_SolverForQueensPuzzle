@@ -25,7 +25,11 @@ public class BoardForQueensPuzzle {
               filesWithQueens.
      */
     public BoardForQueensPuzzle( BoardForQueensPuzzle old) {
-        // your code here
+        lastRankFilled = old.lastRankFilled;
+        filesWithQueens = new int[old.ranks()];
+        for (int i = 0; i < lastRankFilled + 1; i++) { //for-loop to iterate and copy the old values
+          filesWithQueens[i] = old.filesWithQueens[i];
+        } //used the scenarios from the diagrams to catch referencing errors
     }
 
 

@@ -59,19 +59,39 @@ public class SolverForQueensPuzzle {
     private void recordSolutionsStarted() {
 
         // Which has been requested, a base case or recursive case?
-            // your code here
+            if (inProgress.accept()) {//if true, it proceeds
             // action(s) for base case(s)
-            System.out.println( "  for debugging: base case detected for..."
+              solutions.add(new BoardForQueensPuzzle(inProgress));
+           /* System.out.println( "  for debugging: base case detected for..."
                               + System.lineSeparator()
                               + inProgress
                               );
-
+                              */ //works
+              nBoardsConsidered ++;
+            } else if (inProgress.lastIsNg()) {//if true, it proceeds
+              /*System.out.println( "  for debugging: base case detected for..."
+                              + System.lineSeparator()
+                              + inProgress
+                              + System.lineSeparator()
+                              + "It doesn't work."
+                              ); 
+                              */
+              nBoardsConsidered++; //the other case, no solution, no adding
+            } else {
             // action for recursive cases
-            // your code here
-            System.out.println( "  for debugging: recursive case detected for..."
+            for (int f = 0; f < inProgress.ranks(); f++) { //f for file
+                BoardForQueensPuzzle tempStorage = new BoardForQueensPuzzle(inProgress); //temporary holding variable
+                inProgress.populate(f);
+                recordSolutionsStarted();
+                nBoardsConsidered ++;
+                inProgress = tempStorage;
+            }
+            /*System.out.println( "  for debugging: recursive case detected for..."
                               + System.lineSeparator()
                               + inProgress
                               );
+                              */ //works
+            }
     }
 
 

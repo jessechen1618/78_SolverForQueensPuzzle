@@ -3,11 +3,14 @@
 ## [your name here]'s remarks
 
 ### citations / worked with / received help from
-Replace this paragraph with a solid accounting of your sources.
-People have become either lackadaisical or dishonest
-about crediting others for ideas and help. 
-If I grade this work, I will rely on this section as
-a complete listing for judging academic honesty.
+Besides the Piazza threads and discussions, I relied on
+Eric Lau's help. In class, he helped with standardizing
+the notations for the diagrams (frame & heap), which he
+then kindly posted on Piazza to share with others. I also 
+relied on Eric when stuck with the copy constructor, 
+and he directed me to the Piazza post that contained 
+useful discussions. In terms of actual writing and code, 
+I did not rely on anyone.
 
 This list may omit sources common to everyone in the course,
 including...
